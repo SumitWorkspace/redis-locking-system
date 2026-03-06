@@ -18,4 +18,8 @@ app.use(express.json());
 // makes it clear that these routes are part of the API.
 app.use('/api', bookingRoutes);
 
+app.get('/', (req, res) => {
+  res.send("<h1>✅ Redis Locking System is LIVE</h1><p>The server is running perfectly. Use Artillery to test the booking API.</p>");
+});
+
 export default app;
